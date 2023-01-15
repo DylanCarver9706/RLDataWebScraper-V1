@@ -18,3 +18,13 @@ Once the script has run, you should see the message "Server running on port 3000
 
 Please note that you may need to set up your Node.js development environment and install Node.js on your computer, if you haven't already done so.
 Also, please be aware of the website's terms of service, some website may block scraping on their website.
+
+What I asked ChatGPT:
+
+can you create code that scraps this website url=https://rocket-league.com/items/shop for an html a tag that contains a class="rlg-item-shop__item --daily" and displays it on the webpage in node.js javascript?
+
+(Edited a few things in the questions...)
+
+change the code so it scraps the whole webpage into my page
+
+edit the code to display the text that would be in these tags from the URL provided and display them on my page:<h1 class="rlg-item-shop__name"></h1> and <h1 class="rlg-h2 rlg-item-shop__name --daily"></h1>
