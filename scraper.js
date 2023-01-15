@@ -1,4 +1,4 @@
-// Displays item names in their own <h1> tags
+// Displays all text from item <div> tags. Displays color, item, rarity, and random number
 
 const express = require('express')
 const request = require('request')
@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
     request('https://rocket-league.com/items/shop', (error, response, html) => {
         if (!error && response.statusCode === 200) {
             const $ = cheerio.load(html)
-            const h1Tags = $('.rlg-item-shop__name, .rlg-h2.rlg-item-shop__name.--daily')
+            const divTags = $('.rlg-item-shop__item-content, .rlg-item-shop__item-content.--daily')
             let htmlToPrint = ''
-            h1Tags.each((i, el) => {
+            divTags.each((i, el) => {
                 htmlToPrint += `<h1>${$(el).text()}</h1>`
             });
             res.send(htmlToPrint)
@@ -23,6 +23,33 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Server running on port 3000')
 })
+
+
+// Displays item names in their own <h1> tags
+
+// const express = require('express')
+// const request = require('request')
+// const cheerio = require('cheerio')
+
+// const app = express()
+
+// app.get('/', (req, res) => {
+//     request('https://rocket-league.com/items/shop', (error, response, html) => {
+//         if (!error && response.statusCode === 200) {
+//             const $ = cheerio.load(html)
+//             const h1Tags = $('.rlg-item-shop__name, .rlg-h2.rlg-item-shop__name.--daily')
+//             let htmlToPrint = ''
+//             h1Tags.each((i, el) => {
+//                 htmlToPrint += `<h1>${$(el).text()}</h1>`
+//             });
+//             res.send(htmlToPrint)
+//         }
+//     })
+// })
+
+// app.listen(3000, () => {
+//     console.log('Server running on port 3000')
+// })
 
 
 // Displays item names only

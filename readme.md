@@ -30,3 +30,5 @@ change the code so it scraps the whole webpage into my page
 edit the code to display the text that would be in these tags from the URL provided and display them on my page:<h1 class="rlg-item-shop__name"></h1> and <h1 class="rlg-h2 rlg-item-shop__name --daily"></h1>
 
 edit the code to display the text that would be in these tags from the URL provided and display them on my page in their own <h1> tags:<h1 class="rlg-item-shop__name"></h1> and <h1 class="rlg-h2 rlg-item-shop__name --daily"></h1>
+
+change the code to where is only displays text from these html elements onto my page in the own <h1> tags: <div class="rlg-item-shop__item-content --daily"> and <div class="rlg-item-shop__item-content">
