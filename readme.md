@@ -32,3 +32,5 @@ edit the code to display the text that would be in these tags from the URL provi
 edit the code to display the text that would be in these tags from the URL provided and display them on my page in their own <h1> tags:<h1 class="rlg-item-shop__name"></h1> and <h1 class="rlg-h2 rlg-item-shop__name --daily"></h1>
 
 change the code to where is only displays text from these html elements onto my page in the own <h1> tags: <div class="rlg-item-shop__item-content --daily"> and <div class="rlg-item-shop__item-content">
+
+* change the code to where it does not display text to my page if the text contains numbers or the words "very rare wheels", "import decal", "rare decal" "import rocket boost", "very rare banner, and "import body". But it displays all other text to my page.
