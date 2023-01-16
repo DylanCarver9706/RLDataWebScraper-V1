@@ -1,8 +1,6 @@
 // Displays all text from item <div> tags. Displays color, item, rarity, and random number
 // Next Steps: 
-// 1. Get rid of the numbers using ChatGPT
-//    change the code to where is only displays text from these html elements onto my page in its own <h1> tags, 
-//    but it ignores text that has numbers in it: <div class="rlg-item-shop__item-content --daily"> and <div class="rlg-item-shop__item-content">
+// 1.
 // 2. update the code in ChatGPT to ask it to search Google
 //    using this criteria site:https://rl.insider.gg/en/pc Crimson Fennec ImportBody
 //    The question could go like this:

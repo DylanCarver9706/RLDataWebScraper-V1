@@ -25,12 +25,6 @@ can you create code that scraps this website url=https://rocket-league.com/items
 
 (Edited a few things in the questions...)
 
-change the code so it scraps the whole webpage into my page
+can you change the code the extract the text from these html elements instead: <div class="rlg-item-shop__image-meta "> and <h1 class="rlg-item-shop__name"></h1>
 
-edit the code to display the text that would be in these tags from the URL provided and display them on my page:<h1 class="rlg-item-shop__name"></h1> and <h1 class="rlg-h2 rlg-item-shop__name --daily"></h1>
-
-edit the code to display the text that would be in these tags from the URL provided and display them on my page in their own <h1> tags:<h1 class="rlg-item-shop__name"></h1> and <h1 class="rlg-h2 rlg-item-shop__name --daily"></h1>
-
-change the code to where is only displays text from these html elements onto my page in the own <h1> tags: <div class="rlg-item-shop__item-content --daily"> and <div class="rlg-item-shop__item-content">
-
-*change the code to where is only displays text from these html elements onto my page in the own <h1> tags, but it ignores text that has numbers in it: <div class="rlg-item-shop__item-content --daily"> and <div class="rlg-item-shop__item-content">
+can you pair the extracted text together when its displayed? for example: the first and seconds piece of text put together, then the third and fourth, and so on
