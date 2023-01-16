@@ -11,6 +11,7 @@
 // then click the first link
 // then grab the src link of the photo
 
+
 const express = require('express')
 const request = require('request')
 const cheerio = require('cheerio')
@@ -21,10 +22,12 @@ app.get('/', (req, res) => {
     request('https://rocket-league.com/items/shop', (error, response, html) => {
         if (!error && response.statusCode === 200) {
             const $ = cheerio.load(html)
-            const divTags = $('.rlg-item-shop__item-content, .rlg-item-shop__item-content.--daily')
+            const divTags = $('.rlg-item-shop__image-meta, .rlg-item-shop__name')
             let htmlToPrint = ''
             divTags.each((i, el) => {
-                htmlToPrint += `<h1>${$(el).text()}</h1>`
+                if (i % 2 === 0) {
+                    htmlToPrint += `<h1>${$(divTags[i]).text()} ${$(divTags[i + 1]).text()}</h1>`
+                }
             });
             res.send(htmlToPrint)
         }
@@ -34,6 +37,81 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Server running on port 3000')
 })
+
+
+// const express = require('express')
+// const request = require('request')
+// const cheerio = require('cheerio')
+
+// const app = express()
+
+// app.get('/', (req, res) => {
+//     request('https://rocket-league.com/items/shop', (error, response, html) => {
+//         if (!error && response.statusCode === 200) {
+//             const $ = cheerio.load(html)
+//             const divTags = $('.rlg-item-shop__image-meta, .rlg-item-shop__name')
+//             let htmlToPrint = ''
+//             divTags.each((i, el) => {
+//                 htmlToPrint += `<h1>${$(el).text()}</h1>`
+//             });
+//             res.send(htmlToPrint)
+//         }
+//     })
+// })
+
+// app.listen(3000, () => {
+//     console.log('Server running on port 3000')
+// })
+
+
+// const express = require('express')
+// const request = require('request')
+// const cheerio = require('cheerio')
+
+// const app = express()
+
+// app.get('/', (req, res) => {
+//     request('https://rocket-league.com/items/shop', (error, response, html) => {
+//         if (!error && response.statusCode === 200) {
+//             const $ = cheerio.load(html)
+//             const divTags = $('.rlg-item-shop__item-content, .rlg-item-shop__item-content.--daily').not('.rlg-item-shop__meta')
+//             let htmlToPrint = ''
+//             divTags.each((i, el) => {
+//                 htmlToPrint += `<h1>${$(el).text()}</h1>`
+//             });
+//             res.send(htmlToPrint)
+//         }
+//     })
+// })
+
+// app.listen(3000, () => {
+//     console.log('Server running on port 3000')
+// })
+
+
+// const express = require('express')
+// const request = require('request')
+// const cheerio = require('cheerio')
+
+// const app = express()
+
+// app.get('/', (req, res) => {
+//     request('https://rocket-league.com/items/shop', (error, response, html) => {
+//         if (!error && response.statusCode === 200) {
+//             const $ = cheerio.load(html)
+//             const divTags = $('.rlg-item-shop__item-content, .rlg-item-shop__item-content.--daily')
+//             let htmlToPrint = ''
+//             divTags.each((i, el) => {
+//                 htmlToPrint += `<h1>${$(el).text()}</h1>`
+//             });
+//             res.send(htmlToPrint)
+//         }
+//     })
+// })
+
+// app.listen(3000, () => {
+//     console.log('Server running on port 3000')
+// })
 
 
 // Displays item names in their own <h1> tags
