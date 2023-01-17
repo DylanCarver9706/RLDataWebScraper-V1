@@ -2,12 +2,20 @@
 <html>
 
 <head>
-    <title>Daily Rocket League Items</title>
+    <title>Web Scraper</title>
 </head>
 
 <body>
-    <div id="content"></div>
-    <script src="/scraper.js"></script>
+    <div id="data"></div>
+
+    <script>
+        const dataElement = document.getElementById("data");
+        fetch("/")
+            .then(response => response.text())
+            .then(data => {
+                dataElement.innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>
